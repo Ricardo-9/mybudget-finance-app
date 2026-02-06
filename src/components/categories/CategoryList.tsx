@@ -1,29 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { Category } from "@/src/types/expenses";
-import GetCategory from "@/src/services/categoryService";
+import useCategories from "@/src/hooks/useCategories";
 
 //Find and show the categories of expense
 const CategoriesList = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  useEffect(() => {
-    const FetchCategory = async () => {
-      try {
-        const data = await GetCategory();
-        setCategories(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    FetchCategory();
-  }, []);
+  const { categories } = useCategories();
 
   return (
     <div>
-      {categories && categories.length > 0 ? (
+      {categories.length > 0 ? (
         categories.map((category) => {
           return <p key={category.id}>{category.name}</p>;
         })

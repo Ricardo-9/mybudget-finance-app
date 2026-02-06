@@ -1,13 +1,41 @@
 {
-  "expenses": [],
+  "expenses": [
+    {
+      "id": "e183",
+      "description": "dipirona",
+      "amount": 5,
+      "categoryId": 4,
+      "date": ""
+    }
+  ],
   "fixedExpenses": [],
   "savings": [],
   "categories": [
-    { "id": 1, "name": "Food", "color": "" },
-    { "id": 2, "name": "Transport", "color": "" },
-    { "id": 3, "name": "Housing", "color": "" },
-    { "id": 4, "name": "Health", "color": "" },
-    { "id": 5, "name": "Entertainment", "color": "" }
+    {
+      "id": "1",
+      "name": "Food",
+      "color": ""
+    },
+    {
+      "id": "2",
+      "name": "Transport",
+      "color": ""
+    },
+    {
+      "id": "3",
+      "name": "Housing",
+      "color": ""
+    },
+    {
+      "id": "4",
+      "name": "Health",
+      "color": ""
+    },
+    {
+      "id": "5",
+      "name": "Entertainment",
+      "color": ""
+    }
   ],
   "goals": []
 }
