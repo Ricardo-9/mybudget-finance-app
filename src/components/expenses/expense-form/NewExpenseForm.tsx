@@ -3,6 +3,8 @@ import { createNewExpense } from "@/src/services/expenseService";
 import { NewExpense } from "@/src/types/expenses";
 import { useState } from "react";
 import CategoriesListSelect from "../../categories/selectCategorie";
+import ButtonDefault from "../../ui/Button";
+import InputDefault from "../../ui/Input";
 
 const CreateExpenseForm = () => {
   const [newExpenseForm, setNewExpenseForm] = useState<NewExpense>({
@@ -31,13 +33,15 @@ const CreateExpenseForm = () => {
     e.preventDefault();
     try {
       await createNewExpense(newExpenseForm);
+      setNewExpenseForm(
+        {
+    description: "",
+    amount: 0,
+    categoryId: 0,
+    date: "",
+  }
+      )
       console.log("submited");
-      setNewExpenseForm({
-        description: "",
-        amount: 0,
-        categoryId: 0,
-        date: "",
-      });
     } catch (error) {
       console.log(error);
     }
@@ -46,25 +50,25 @@ const CreateExpenseForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="description">Description</label>
-        <input
-          type="text"
+        <InputDefault
           id="description"
+          type="text"
           onChange={handleDescriptionChange}
           value={newExpenseForm.description}
-        ></input>
-        <label htmlFor="amount">Amount</label>
-        <input
-          type="number"
+          placeholder="Insert The Description of Your Expense"
+        ></InputDefault>
+        <InputDefault
           id="amount"
+          type="number"
           onChange={handleAmountChange}
           value={newExpenseForm.amount}
-        ></input>
+          placeholder="Insert The amount of your expense"
+        ></InputDefault>
         <CategoriesListSelect
           handleOnChange={handleCategoriesChange}
           value={newExpenseForm.categoryId}
         ></CategoriesListSelect>
-        <button type="submit">submit</button>
+        <ButtonDefault type="submit">Create New Expense</ButtonDefault>
       </form>
     </div>
   );

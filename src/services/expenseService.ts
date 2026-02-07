@@ -1,6 +1,6 @@
 ;
 import { Expense ,NewExpense} from "../types/expenses";
-export async function getExpense(): Promise<Expense[]> {
+export async function getExpenses(): Promise<Expense[]> {
   const response = await fetch("http://localhost:5000/expenses");
 
   const data: Expense[] = await response.json();
@@ -10,7 +10,7 @@ export async function getExpense(): Promise<Expense[]> {
   return data;
 }
 
-export async function deleteExpense(id: number) {
+export async function deleteExpenses(id: number) {
   try {
     fetch(`http://localhost:5000/expenses/${id}`, {
       method: "DELETE",

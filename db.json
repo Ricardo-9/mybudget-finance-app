@@ -1,10 +1,24 @@
 {
   "expenses": [
     {
-      "id": "e183",
+      "id": "cbfb",
       "description": "dipirona",
       "amount": 5,
       "categoryId": 4,
+      "date": ""
+    },
+    {
+      "id": "91e5",
+      "description": "Aluguel",
+      "amount": 500,
+      "categoryId": 3,
+      "date": ""
+    },
+    {
+      "id": "0da8",
+      "description": "Conta de internet",
+      "amount": 100,
+      "categoryId": 3,
       "date": ""
     }
   ],

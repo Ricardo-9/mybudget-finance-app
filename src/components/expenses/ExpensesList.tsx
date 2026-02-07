@@ -1,26 +1,24 @@
 "use client";
 import useExpenses from "@/src/hooks/useExpenses";
+import ExpenseCard from "./expenseCard";
 
-//Find and show the expenses
 const ExpensesList = () => {
-  const { expenses } = useExpenses();
+  const { expenses, removeExpense } = useExpenses();
 
   return (
-    <div>
+    <div className="flex">
       {expenses.length > 0 ? (
         expenses.map((expense) => {
           return (
-            <div key={expense.id}>
-              <h2>{expense.description}</h2>
-              <p>
-                <span>Category = </span>
-                {expense.categoryId}
-              </p>
-              <p>
-                <span>Date = </span>
-                {expense.date}
-              </p>
-            </div>
+            <ExpenseCard
+              key={expense.id}
+              id={expense.id}
+              date={expense.date}
+              description={expense.description}
+              amount={expense.amount}
+              categoryId={expense.categoryId}
+              onDelete={removeExpense}
+            />
           );
         })
       ) : (
