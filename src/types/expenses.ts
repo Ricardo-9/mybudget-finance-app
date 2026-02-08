@@ -1,5 +1,5 @@
 export type Expense = {
-  id: number;
+  id: string;
   date: string; // ISO: "YYYY-MM-DD"
   categoryId: number;
   amount: number;
@@ -7,7 +7,7 @@ export type Expense = {
 };
 
 export type FixedExpense = {
-  id: number;
+  id: string;
   paymentDayOfMonth: number;
   categoryId: number;
   amount: number;
@@ -15,21 +15,21 @@ export type FixedExpense = {
 };
 
 export type Saving = {
-  id: number;
+  id: string;
   amount: number;
   date: string; // ISO: "YYYY-MM-DD"
   note?: string;
 };
 
 export type Goal = {
-  id: number;
+  id: string;
   targetAmount: number;
   currentAmount: number;
   title: string;
 };
 
 export type Category = {
-  id: number;
+  id: string;
   name: string;
   color: string;
 };

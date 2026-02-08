@@ -1,10 +1,21 @@
 import { Category } from "../types/expenses";
+
+const url = "http://localhost:5000/categories";
 export default async function GetCategories(): Promise<Category[]> {
-  const response = await fetch("http://localhost:5000/categories");
+  try {
+    const response = await fetch(url);
 
-  const data: Category[] = await response.json();
+    if (!response.ok) {
+      throw new Error(`Status:${response.status}:${response.statusText}`);
+    }
 
-  console.log(data);
+    const data: Category[] = await response.json();
 
-  return data;
+    console.log(data);
+
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }

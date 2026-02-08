@@ -15,9 +15,11 @@ const CategoriesListSelect = ({
     <select onChange={handleOnChange}>
       {categories.map((category) => {
         return (
+          
           <option key={category.id} value={category.id}>
             {category.name}
           </option>
+          
         );
       })}
     </select>

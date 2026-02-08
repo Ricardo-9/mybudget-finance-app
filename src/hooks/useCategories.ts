@@ -7,12 +7,12 @@ export default function useCategories() {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
-    const fetchCategory = async () => {
+    const fetchCategory = async ():Promise<void> => {
       try {
         const data = await getCategories();
         setCategories(data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
 
