@@ -76,40 +76,42 @@ Em desenvolvimento ativo
 | PUT    | /expenses/:id      | Atualizar despesa     |
 | DELETE | /expenses/:id      | Remover despesa       |
 
-## Estrutura do projeto
 
+   ## Estrutura de Pastas
+
+O projeto segue uma estrutura organizada dentro do diretório `src/`:
+
+```text
 src/
-app/ # Rotas e páginas (Next.js App Router)
-onboarding/
-dashboard/
-expenses/
-new-expense/
-edit-expense/[id]/
-fixed-expenses/
-savings/
-layout.tsx
-page.tsx
+├── app/                  # Rotas e páginas (Next.js App Router)
+│   ├── onboarding/       # Fluxo de integração inicial
+│   ├── dashboard/        # Painel principal
+│   ├── expenses/         # Gestão de despesas
+│   ├── new-expense/      # Cadastro de nova despesa
+│   ├── edit-expense/
+│   │   └── [id]/         # Edição de despesa dinâmica
+│   ├── fixed-expenses/   # Despesas fixas
+│   ├── savings/          # Área de economias/metas
+│   ├── layout.tsx        # Layout raiz e global
+│   └── page.tsx          # Página inicial/landing
+├── components/           # Componentes reutilizáveis
+│   ├── categories/       # Componentes de categorias
+│   ├── expenses/         # Componentes específicos de despesas
+│   ├── layout/           # Componentes de estrutura (nav, sidebar)
+│   └── ui/               # Componentes básicos (buttons, inputs)
+├── hooks/                # Hooks customizados (lógica de negócios)
+│   ├── useCategories.ts
+│   ├── useExpense.ts
+│   └── useExpenses.ts
+├── services/             # Comunicação com API / Banco de Dados
+│   ├── categoryService.ts
+│   └── expenseService.ts
+├── types/                # Tipagens TypeScript
+│   └── expenses.ts
+├── constants/            # Constantes globais e configurações
+└── styles/               # Estilos globais (CSS/Tailwind)
+```
 
-components/ # Componentes reutilizáveis
-categories/
-expenses/
-layout/
-ui/
-
-hooks/ # Hooks customizados
-useCategories.ts
-useExpense.ts
-useExpenses.ts
-
-services/ # Comunicação com API
-categoryService.ts
-expenseService.ts
-
-types/ # Tipagens TypeScript
-expenses.ts
-
-constants/ # Constantes globais
-styles/ # Estilos globais
 
 
 ## Como executar o projeto
