@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MY BUDGET - FINANCIAL APP (Em desenvolvimento)
 
-## Getting Started
+Aplicação para gerenciamento de despesas pessoais, desenvolvida como projeto de estudo para consolidar conhecimentos em desenvolvimento web.
 
-First, run the development server:
+O objetivo do projeto é evoluir de um backend simples para uma estrutura mais robusta com autenticação, banco relacional e boas práticas de desenvolvimento.Além de front end estruturado.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚧 Status do projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Em desenvolvimento**
 
-## Learn More
+### Funcionalidades atuais
+- CRUD de despesas (expenses)
+- Estrutura de backend com JSON-SERVER
+- Separação por camadas (routes, services, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+### Próximas funcionalidades
+- Autenticação de usuários
+- Associação de despesas por usuário
+- Migração completa para PostgreSQL
+- Integração com Prisma ORM
+- Deploy da API
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Tecnologias utilizadas
 
-## Deploy on Vercel
+- React
+- NExt.js
+- Typescript
+- Json-server
+- Tailwind CSS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Endpoints principais
+Listar despesas
+GET /expenses
+Criar despesa
+POST /expenses
+Atualizar despesa
+PUT /expenses/:id
+Deletar despesa
+DELETE /expenses/:id
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎯 Objetivo do projeto
+Este projeto faz parte do meu processo de aprendizado em backend, e front end com foco em:
+desenvolver uma aplicação real que possa gerenciar e auxiliar na vida financeira do usuário, com foco em controle de despezas e futuramente, economias e metas.
+
+
+
+
+👨‍💻 Autor
+Desenvolvido por Ricardo Rocha Alves
+Projeto focado em aprendizado e evolução profissional.
