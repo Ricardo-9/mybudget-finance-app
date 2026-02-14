@@ -119,36 +119,37 @@ text
 1. Clonar o repositório
    ```bash
    git clone https://github.com/Ricardo-9/mybudget-finance-app
-Instalar dependências
 
-bash
-npm install
-Iniciar o backend simulado
+2. Instalar dependências
+   ```bash
+   npm install
 
-bash
-npx json-server --watch db.json --port 3001
-Rodar o projeto
+3. Iniciar o BackEnd simulado
+   ```bash
+   npx json-server --watch db.json --port 3001
 
-bash
-npm run dev
-Objetivo profissional
+4. Rodar o projeto
+   ```bash
+   npm run dev
+
+## Objetivo profissional
 Este projeto faz parte da minha preparação para atuar como desenvolvedor full stack júnior, com foco em:
 
-Construção de aplicações completas
+-Construção de aplicações completas
 
-Integração entre front-end e back-end
+-Integração entre front-end e back-end
 
-Autenticação e segurança
+-Autenticação e segurança
 
-Banco de dados relacional
+-Banco de dados relacional
 
-Boas práticas de arquitetura
+-Boas práticas de arquitetura
 
-Autor
+## Autor
 Ricardo Rocha Alves
 Desenvolvedor Full Stack em formação
 
-Experiência com React, Next.js e TypeScript
+### Experiência com React, Next.js e TypeScript
 
 Projeto desenvolvido como parte do processo de evolução profissional
 
