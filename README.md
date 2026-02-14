@@ -78,39 +78,38 @@ Em desenvolvimento ativo
 
 ## Estrutura do projeto
 
-Organizado com foco em escalabilidade e separação de responsabilidades:
 src/
-├── app/ # Rotas e páginas (Next.js App Router)
-│ ├── onboarding/
-│ ├── dashboard/
-│ ├── expenses/
-│ ├── new-expense/
-│ ├── edit-expense/[id]/
-│ ├── fixed-expenses/
-│ ├── savings/
-│ ├── layout.tsx
-│ └── page.tsx
-│
-├── components/ # Componentes reutilizáveis
-│ ├── categories/
-│ ├── expenses/
-│ ├── layout/
-│ └── ui/
-│
-├── hooks/ # Hooks customizados
-│ ├── useCategories.ts
-│ ├── useExpense.ts
-│ └── useExpenses.ts
-│
-├── services/ # Comunicação com API
-│ ├── categoryService.ts
-│ └── expenseService.ts
-│
-├── types/ # Tipagens TypeScript
-│ └── expenses.ts
-│
-├── constants/ # Constantes globais
-└── styles/ # Estilos globais
+app/ # Rotas e páginas (Next.js App Router)
+onboarding/
+dashboard/
+expenses/
+new-expense/
+edit-expense/[id]/
+fixed-expenses/
+savings/
+layout.tsx
+page.tsx
+
+components/ # Componentes reutilizáveis
+categories/
+expenses/
+layout/
+ui/
+
+hooks/ # Hooks customizados
+useCategories.ts
+useExpense.ts
+useExpenses.ts
+
+services/ # Comunicação com API
+categoryService.ts
+expenseService.ts
+
+types/ # Tipagens TypeScript
+expenses.ts
+
+constants/ # Constantes globais
+styles/ # Estilos globais
 
 
 ## Como executar o projeto
