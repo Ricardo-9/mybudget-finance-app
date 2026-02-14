@@ -112,7 +112,6 @@ src/
 ├── constants/ # Constantes globais
 └── styles/ # Estilos globais
 
-text
 
 ## Como executar o projeto
 
@@ -135,15 +134,15 @@ text
 ## Objetivo profissional
 Este projeto faz parte da minha preparação para atuar como desenvolvedor full stack júnior, com foco em:
 
--Construção de aplicações completas
+- Construção de aplicações completas
 
--Integração entre front-end e back-end
+- Integração entre front-end e back-end
 
--Autenticação e segurança
+- Autenticação e segurança
 
--Banco de dados relacional
+- Banco de dados relacional
 
--Boas práticas de arquitetura
+- Boas práticas de arquitetura
 
 ## Autor
 Ricardo Rocha Alves
