@@ -11,7 +11,21 @@ CREATE TABLE
         email VARCHAR(255) UNIQUE NOT NULL,
         password_hash VARCHAR(255) NOT NULL,
         created_at TIMESTAMP DEFAULT NOW (),
-        updated_at TIMESTAMP DEFAULT NOW ()
+        updated_at TIMESTAMP
+    );
+
+--USERS PROFILE
+
+CREATE TABLE 
+    user_profile(
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid (),
+        user_id UUID UNIQUE NOT NULL,
+        monthly_income DECIMAL(10,2),
+        currency VARCHAR(10) NOT NULL DEFAULT 'USD' ,
+        main_financial_goal VARCHAR(30),
+        created_at TIMESTAMP DEFAULT NOW (),
+        updated_at TIMESTAMP DEFAULT NOW (),
+        deleted_at TIMESTAMP 
     );
 
 

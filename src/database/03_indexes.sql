@@ -1,5 +1,9 @@
 --INDEX
 
+--PROFILE
+CREATE INDEX idx_user_profile_user
+ON user_profile(user_id);
+
 -- EXPENSES
 CREATE INDEX idx_expenses_user
 ON expenses(user_id);

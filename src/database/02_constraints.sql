@@ -1,5 +1,12 @@
 --CONSTRAINTS
 
+--PROFILE ---> USERS 
+ALTER TABLE user_profile
+ADD CONSTRAINT fk_user_profile_user 
+FOREIGN KEY (user_id) 
+REFERENCES users(id) 
+ON DELETE CASCADE;
+
 -- EXPENSES ---> USERS
 ALTER TABLE expenses 
 ADD CONSTRAINT fk_expenses_user 
